@@ -17,3 +17,5 @@ CREATE TABLE IF NOT EXISTS Orders (
     order_date DATE DEFAULT CURRENT_DATE,
     FOREIGN KEY(customer_id) REFERENCES Customer (customer_id)
 );
+
+------TO Do for reader to impliment the rest of physical-logical diagram----
