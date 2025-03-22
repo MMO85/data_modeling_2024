@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:17.4
-    container_name: postgres_data_modeling
+    container_name: postgres_data_modeling_new
     restart: always
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
