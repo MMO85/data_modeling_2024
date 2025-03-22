@@ -11,5 +11,5 @@ VALUES
 (
     50, '900-02-05'
 );
---DELETE FROM ezecream_05.orders WHERE customer_id = 50;
+DELETE FROM ezecream_05.orders WHERE customer_id = 50;
 SELECT * FROM ezecream_05.orders;

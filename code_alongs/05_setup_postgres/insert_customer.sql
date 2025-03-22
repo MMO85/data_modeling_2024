@@ -35,9 +35,8 @@ VALUES
         'Lothbrok',
         'ragnar@kattegat.com',
         '1 Valhalla Way'
-    );
-
-    --DELETE FROM ezecream_05.customer WHERE customer_id = 50;
+    );  
+    DELETE FROM ezecream_05.customer WHERE customer_id = 50;
 --ERROR: update or delete on table "customer" violates foreign key constraint "orders_customer_id_fkey" on table "orders"
 
 -- TO do: how to delete row with customer _ID 50?
