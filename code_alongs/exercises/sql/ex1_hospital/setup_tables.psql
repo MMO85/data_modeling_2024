@@ -1,0 +1,24 @@
+CREATE SCHEMA IF NOT EXISTS exercise_1;
+
+DROP TABLE IF EXISTS exercise_1.Hospital CASCADE;
+DROP TABLE IF EXISTS exercise_1.Department CASCADE;
+DROP TABLE IF EXISTS exercise_1.HospitalDepartment CASCADE;
+
+CREATE TABLE exercise_1.hospital(
+    hospital_id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    address VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE exercise_1.department(
+    department_id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE exercise_1.HospitalDepartment(
+    hospital_id INTEGER,
+    department_id INTEGER,
+    PRIMARY KEY(hospital_id, department_id), --composit primary key
+    FOREIGN KEY (hospital_id) REFERENCES exercise_1.Hospital(hospital_id) ON DELETE CASCADE,
+    FOREIGN KEY (department_id) REFERENCES exercise_1.Department(department_id)ON DELETE CASCADE
+);
