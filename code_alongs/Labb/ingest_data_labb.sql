@@ -64,3 +64,4 @@ INSERT INTO Enrollment (student_id, course_id) VALUES
 (1, 1),
 (1, 2);
 
+SELECT * FROM labb_yrkco.student;
