@@ -64,4 +64,26 @@ INSERT INTO Enrollment (student_id, course_id) VALUES
 (1, 1),
 (1, 2);
 
-SELECT * FROM labb_yrkco.student;
+SELECT * FROM labb_yrkco.consultant;
+
+SELECT * FROM labb_yrkco.teacher;
+
+SELECT * FROM labb_yrkco.employment;
+SELECT * FROM labb_yrkco.programmanager;
+
+
+SELECT 
+  t.teacher_id,
+  p.first_name,
+  p.last_name,
+  CASE 
+    WHEN t.consultant_id IS NOT NULL THEN 'Consultant'
+    WHEN t.employee_id IS NOT NULL THEN 'Employee'
+    ELSE 'Unknown'
+  END AS teacher_type
+FROM Teacher t
+JOIN PersonalInfo p ON t.person_id = p.person_id;
+
+
+SELECT * FROM Teacher WHERE consultant_id IS NOT NULL;
+
