@@ -6,7 +6,7 @@ CREATE TABLE "Address" (
   "address_id" serial PRIMARY KEY,
   "city" varchar,
   "street" varchar,
-  "number" varchar,
+  "homenum" varchar,
   "zip_code" varchar
 );
 
@@ -14,7 +14,7 @@ CREATE TABLE "PersonalInfo" (
   "person_id" serial PRIMARY KEY,
   "first_name" varchar,
   "last_name" varchar,
-  "personnumber" varchar,
+  "personnumer" varchar,
   "email" varchar
 );
 
