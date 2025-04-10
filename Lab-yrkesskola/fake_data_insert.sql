@@ -7,10 +7,13 @@ INSERT INTO address (city, street, homenum, zip_code) VALUES
 ('Gothenburg', 'Linnégatan', '45B', '41308');
 
 -- Personal Info
-INSERT INTO personal_info (first_name, last_name, personnumber, email) VALUES
+INSERT INTO sti.personal_info (first_name, last_name, personnumber, email) VALUES
 ('Anna', 'Karlsson', '900101-1234', 'anna.karlsson@example.com'),
 ('Erik', 'Svensson', '880512-5678', 'erik.svensson@example.com'),
-('Maria', 'Nilsson', '920315-9876', 'maria.nilsson@example.com');
+('Maria', 'Nilsson', '920315-9876', 'maria.nilsson@example.com'),
+('Johan', 'Eriksson', '870405-4567', 'johan.eriksson@example.com'),
+('Lina', 'Andersson', '950225-7890', 'lina.andersson@example.com'),
+('Peter', 'Jonsson', '891130-3210', 'peter.jonsson@example.com');
 
 -- School
 INSERT INTO school (school_name, address_id) VALUES
@@ -69,3 +72,13 @@ INSERT INTO enrollment (course_id, student_id) VALUES
 (1, 1),
 (3, 2),
 (2, 3);
+
+INSERT INTO sti.person_role (person_id, role) VALUES
+(1, 'teacher'),
+(2, 'student'),
+(3, 'teacher'),
+(7, 'coordinator'),
+(8, 'student'),
+(9, 'teacher');
+
+
